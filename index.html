@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .bg {
+            height: 120vh;
+            width: auto;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: 20vh;
+            background: linear-gradient(to bottom, aqua, transparent);
+            filter: blur(10px);
+            pointer-events: none;
+        }
+        .bg2{
+            height: 50vh;
+            width: auto;
+            background-color: rgb(185, 127, 57);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="bg">
+    <p>intro page</p>
+</div>
+
+<div class="bg2"></div>
+</body>
+</html>
