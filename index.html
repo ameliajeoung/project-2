@@ -3,53 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body{
-            margin: 0;
+    <title>The Cahaya Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var nav = document.querySelector('.nav');
+    window.addEventListener("scroll", function() {
+        var scrollPosition = window.scrollY;
+        if (scrollPosition > 1150) {
+            nav.classList.remove('hidden');
+        } else {
+            nav.classList.add('hidden');
         }
-        .bg {
-            height: 120vh;
-            width: auto;
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bg::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: auto;
-            height: 20vh;
-            background: linear-gradient(to bottom, aqua, transparent);
-            filter: blur(10px);
-            pointer-events: none;
-        }
-        .bg2{
-            height: 50vh;
-            width: auto;
-            background-color: rgb(185, 127, 57);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-
-    </style>
+    });
+});
+    </script>
 </head>
+
 <body>
-<div class="bg">
-    <p>intro page</p>
+<div class="page1">
+<div class="section1" id="section1">
+
+    <div class="bg">
+        <div class="logo">
+            <div class="title">
+                <h1>CAHAYA</h1>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+    
 </div>
 
-<div class="bg2"></div>
+<div class="section2" id="section2">
+    <div class="nav">
+        <p><a href="#section2">cahaya</a></p>
+        <p><a href="#section3">planet osma</a></p>
+        <p><a href="#islands">islands</a></p>
+    </div>
+
+    <div class="bg2">
+        <div id="cahaya-pic">cahaya picture</div>
+        <div class="cahaya-info">
+            <h2>Cahaya</h2>
+            <p>Cahaya is a baker turned horticulturist who is very adventurous</p>
+            <p>Cahaya is a baker turned horticulturist who is very adventurous</p>
+            <p>Cahaya is a baker turned horticulturist who is very adventurous</p>
+            <p>Cahaya is a baker turned horticulturist who is very adventurous</p>
+        </div>
+        
+
+        
+
+    </div>
+<div class="section3" id="section3">
+    <div class="osma">
+        <div id="planet-text">PLANET OSMA</div>
+    </div>
+    <div class="planet-info">
+        <p>hiiii i don't know why this isn't working help me why is code so frustrating</p>
+        <p>hiiii</p>
+        <p>hiiii</p>
+    </div>
+
+</div>
+
+<div class="islands" id="islands">
+    <div class="island"> 
+        <img src="images/test.jpg" alt="Island 1">
+        <span><a href="island1.html">Strobi Island ></a></span>
+    </div>
+    <div class="island"> 
+        <img src="images/test.jpg" alt="Island 2 Image">
+        <span>island 2 ></span>
+    </div>
+    <div class="island"> 
+        <img src="images/test.jpg" alt="Island 3 Image">
+        <span>island 3 ></span>
+    </div>
+    <div class="island"> 
+        <img src="images/test.jpg" alt="Island 1 Image">
+        <span>island 4 ></span>
+    </div>
+</div>
+
+<div class="me">
+    by amelia jeoung
+</div>
+
+</div>
+</div>
 </body>
 </html>
