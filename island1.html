@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="nav">
-        <p><a href="index.html">last island</a></p>
+        <p><a href="island1.html"> ← previous island</a></p>
         <p><a href="index.html">home</a></p>
-        <p><a href="island2.html">next island</a></p>
+        <p><a href="island1.html">next island →</a></p>
     </div>
 
     <div id="island-name">
@@ -19,23 +19,35 @@
     </div>
 
     <div class="island-info">
+        <div class="island-grid">
         <div class="island-pic"> island image</div>
         <div class="island-description"> 
             <p>A grassy plain with a mildly temperative climate. Mainly inhabited by shepherds, the livestock of this island are larger than normal due to the ideal environment and the quality of their care.</p>
             <p>Cahaya first started traveling here for the animal husbandry, but the fascinating flora here piqued her interest.</p>
         </div>
-
         <div class="island-toggle"> island stats</div>
-
-        <div class="island-stats" id="plant-info"  onclick="togglePlants()"> 
-            <h2>Plant Database</h2>
-            <div class="toggle-plants-content">
-                <p>this will appear</p>
-            </div>
         </div>
 
+        <div class="info-toggle">
+            <div class="island-stats" id="plant-info" onclick="togglePlants()"> 
+                <h2>Plant Database</h2>
+                <div class="toggle-content">
 
-        <div class="island-stats" id="gear-info"> toggle cahaya gear information</div>
+                    <p>This will appear for Plant Database</p>
+                    
+                </div>
+            </div>
+        
+            <div class="island-stats" id="gear-info" onclick="toggleGear()"> 
+                <h2>Gear Needed</h2>
+                <div class="toggle-content">
+
+                    <p>This will appear for Gear Needed</p>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
 </body>

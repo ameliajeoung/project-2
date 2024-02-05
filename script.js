@@ -1,12 +1,20 @@
 function togglePlants() {
-    var toggleContent = document.querySelector('.toggle-plants-content');
-    var islandStats = document.querySelector('.island-stats');
+    toggleSection('plant-info');
+}
 
-    if (toggleContent.style.display === 'none' || toggleContent.style.display === '') {
-        toggleContent.style.display = 'block';
-        islandStats.style.height = toggleContent.offsetHeight + 'px';
+function toggleGear() {
+    toggleSection('gear-info');
+}
+
+function toggleSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    var content = section.querySelector('.toggle-content');
+    
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        document.querySelector('.island-info').style.marginBottom = content.offsetHeight + '20px';
     } else {
-        toggleContent.style.display = 'none';
-        islandStats.style.height = '';
+        content.style.display = 'none';
+        document.querySelector('.island-info').style.marginBottom = '20px'; 
     }
 }
