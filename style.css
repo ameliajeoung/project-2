@@ -22,9 +22,37 @@
     font-family: PPGrafier;
     src:url(fonts/PPGrafier.otf) format("opentype");
 }
+
 body{
     margin: 0;
     background-color: #FBFADA;
+}
+@media (max-width: 1000px){
+.page1{
+    display: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone{
+    height: 40%;
+    margin: 0 20%;
+    padding: 0 10%;
+    border: 2px solid #436850;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-family: "PPFragment";
+    color: #487558;
+    background-color: #e2e1bd;
+}
+}
+@media (min-width: 1000px){
+.phone{
+    display: none;
 }
 h2{
     font-family: "Migra";
@@ -190,6 +218,10 @@ h1{
     display: flex;
     justify-content: space-around;
 }
+.islands a{
+    display: flex;
+    width: 100%;
+}
 .island {
     border: 1px solid #436850;
     width: 100%;
@@ -198,14 +230,14 @@ h1{
     object-fit: cover;
 }
 .island:hover img {
-    opacity: 1;
+    opacity: 0;
 }
 .island img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    opacity:0;
+    opacity:1;
     transition: opacity 0.3s ease;
     z-index: 1;
     filter: blur(5px);
@@ -214,16 +246,20 @@ span{
     font-family: "Migra";
     letter-spacing: 2px;
     font-size: 28px;
-    color: #9DBC98;
+    opacity: 0;
     position: absolute;
     z-index: 2;
     width: 320px;
-    top: 95%;
-    left: 50%;
+    top: 50%;
+    left: 65%;
     transform: translate(-50%, -50%);
 }
 .island:hover span{
-    color:#FBFADA
+    color:#9DBC98;
+    opacity:1
+}
+.span:hover span{
+    color: #A1CCD1;
 }
 .me{
     background-color: #A1CCD1;
@@ -279,6 +315,8 @@ h3{
     font-family:"PPRSM";
     font-size: 14pt;
     color: #38453d;
+    max-height: 100%;
+    overflow: auto;
 }
 .island-toggle{
     background-color: #A1CCD1;
@@ -317,14 +355,16 @@ h3{
     display: flex;
     overflow: auto;
     align-items: center;
+    justify-content: center;
 }
 .plant{
+    position: relative;
     height: 200px;
-    width: 250px;
-    background-color: #9DBC98;
+    width: 230px;
+    min-width: 230px;
+    background-color: #e2e1bd;
     margin: 10px 20px;
     overflow: hidden;
-    position: relative;
     border: 2px solid #9DBC98;
 }
 .plant img{
@@ -333,25 +373,41 @@ h3{
     display: block;
     object-fit: cover;
 }
-.plant p{
+.plant:hover .hover-image{
+    filter: blur(2px);
+}
+.plant-text{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 10px;
-    background-color: #8bac8698; 
-    display: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    padding: 20px;
+    background-color: #f0efcd98; 
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
+}
+.plant p{
     font-family: "PPCirka";
     color: #436850;
+    line-height: 15px;
 }
-.plant:hover p{
+.plant h4{
+    font-family: "PPCirka";
+    color: #487558;
+    text-shadow: 2px 2px 5px #f0efcd;
+    margin-bottom: -5px;
+    font-size: 16pt;
+}
+.plant:hover .plant-text{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px auto;
+    opacity: 1;
 }
 button{
     text-decoration: none;
@@ -366,4 +422,5 @@ button{
 button:hover{
     color: #436850;
     border: 2px solid #436850;
+}
 }

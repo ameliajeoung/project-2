@@ -12,7 +12,7 @@ function toggleSection(sectionId) {
     
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
-        document.querySelector('.island-info').style.marginBottom = content.offsetHeight + '20px';
+        document.querySelector('.island-info').style.marginBottom = content.offsetHeight + 20 +'px';
     } else {
         content.style.display = 'none';
         document.querySelector('.island-info').style.marginBottom = '20px'; 
@@ -34,17 +34,18 @@ function clickPlants(direction) {
     }
 
     let plants = document.getElementsByClassName('plant');
-
+    console.log(totalPlants);
     let loopStart = currentIndex;
-    let loopEnd = (currentIndex + 4) % totalPlants;
 
     for (let i = 0; i < plants.length; i++) {
         plants[i].style.display = 'none';
     }
 
-    while (loopStart !== loopEnd) {
-        plants[loopStart].style.display = 'block';
-        loopStart = (loopStart + 1) % totalPlants;
+    let loopEnd = (loopStart + 4) % totalPlants;
+
+    for (let i = loopStart; i !== loopEnd; i = (i + 1) % totalPlants) {
+        plants[i].style.display = 'block';
     }
 }
+
 
