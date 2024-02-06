@@ -155,7 +155,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: end;
-    border-top: 2px solid #9DBC98;
+    border-top: 2px solid #436850;
     border-bottom: 2px solid #436850;
 }
 #planet-text{
@@ -163,7 +163,7 @@ h1{
     font-size: 120pt;
     color: #f0efcd;
     transform: translate(0%, 22%);
-    text-shadow: 2px 2px 5px #436850;
+    text-shadow: 2px 2px 5px rgb(135, 68, 53);
 }
 .planet-gap{
     margin-left: 10%;
