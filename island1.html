@@ -29,20 +29,54 @@
         </div>
 
         <div class="info-toggle">
-            <div class="island-stats" id="plant-info" onclick="togglePlants()"> 
-                <h2>Plant Database</h2>
+            <div class="island-stats" id="plant-info"> 
+                <h2 onclick="togglePlants()">Plant Database</h2>
                 <div class="toggle-content">
 
-                    <p>This will appear for Plant Database</p>
+                    <div class="plant-pic">
+
+                        <button onclick="clickPlants(-1)"> ← </button>
+
+                        <div class="plant">
+                            <img src="images/home.jpg" alt="Paris">
+                            <p>plant 1</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/test.jpg" alt="Paris">
+                            <p>plant 2</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/home.jpg" alt="Paris">
+                            <p>plant 3</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/test.jpg" alt="Paris">
+                            <p>plant 4</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/home.jpg" alt="Paris">
+                            <p>plant 5</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/test.jpg" alt="Paris">
+                            <p>plant 6</p>
+                        </div>
+                        <div class="plant">
+                            <img src="images/test.jpg" alt="Paris">
+                            <p>plant 7</p>
+                        </div>
+                        
+                        <button onclick="clickPlants(1)"> → </button>
+                    </div>
                     
                 </div>
             </div>
         
-            <div class="island-stats" id="gear-info" onclick="toggleGear()"> 
-                <h2>Gear Needed</h2>
+            <div class="island-stats" id="gear-info"> 
+                <h2 onclick="toggleGear()">Gear Needed</h2>
                 <div class="toggle-content">
 
-                    <p>This will appear for Gear Needed</p>
+                    <p>>There is currently not enough information for this island's gear.</p>
 
                 </div>
 

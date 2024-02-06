@@ -18,3 +18,33 @@ function toggleSection(sectionId) {
         document.querySelector('.island-info').style.marginBottom = '20px'; 
     }
 }
+
+let currentIndex = 0;
+clickPlants(0);
+
+function clickPlants(direction) {
+    currentIndex += direction;
+
+    const totalPlants = document.getElementsByClassName('plant').length;
+
+    if (currentIndex < 0) {
+        currentIndex = totalPlants - 1;
+    } else if (currentIndex >= totalPlants) {
+        currentIndex = 0;
+    }
+
+    let plants = document.getElementsByClassName('plant');
+
+    let loopStart = currentIndex;
+    let loopEnd = (currentIndex + 4) % totalPlants;
+
+    for (let i = 0; i < plants.length; i++) {
+        plants[i].style.display = 'none';
+    }
+
+    while (loopStart !== loopEnd) {
+        plants[loopStart].style.display = 'block';
+        loopStart = (loopStart + 1) % totalPlants;
+    }
+}
+

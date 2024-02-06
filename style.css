@@ -83,12 +83,13 @@ h1{
 }
 .line{
     width: 1110px;
-    height: 2px;
+    height: 5px;
     margin: 0 auto;
     background-color: #FBFADA;
+    box-shadow: 2px 2px 5px #7c565ca6;
 }
 .bg2{
-    height: 750px;
+    height: auto;
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -98,15 +99,18 @@ h1{
 #cahaya-pic{
     border: 2px solid #A1CCD1;
     border-radius: 5%;
-    height: auto;
-    width: auto;  
+    background-color: #f0efcd;
+    background-image: url('images/cahaya.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
     margin: 100px 20px 100px 100px;
 }
 .cahaya-info{
     background-color: #aec2a8a6;
     height: auto;
     width: auto;  
-    padding: 10px 50px;
+    padding: 70px 50px;
     margin: 100px 100px 100px 20px;
     display: flex; 
     flex-direction: column;
@@ -123,7 +127,7 @@ h1{
 .nav{
     background-color: #436850;
     position: sticky;
-    height: 50px;
+    height: 35px;
     top: 0;
     color: #FBFADA;
     font-size: 20px;
@@ -140,25 +144,30 @@ h1{
 }
 .section3{
     background-color: #9DBC98;
-    height: 130vh;
+    height: 150vh;
 }
 .osma{
-    background-color: #cfe7ea;
-    height: 60vh;
+    background-image: url('images/planet.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: end;
+    border-top: 2px solid #9DBC98;
+    border-bottom: 2px solid #436850;
 }
 #planet-text{
     font-family: "Migra";
     font-size: 120pt;
-    color: #9DBC98;
+    color: #f0efcd;
     transform: translate(0%, 22%);
     text-shadow: 2px 2px 5px #436850;
 }
 .planet-gap{
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .planet-info{
     display: grid;
@@ -169,7 +178,9 @@ h1{
 .planet-info p{
     font-family: 'PPFragment';
     font-size: 14pt;
-    color: #436850;
+    color: #365a43;
+    letter-spacing: 0.3px;
+
 }
 .islands{
     background-color: #FBFADA;
@@ -232,8 +243,8 @@ span{
 .island-grid{
     display: grid;
     grid-template-columns: 6fr 3fr 4fr;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 #island-name{
     display: flex;
@@ -241,6 +252,7 @@ span{
     height: 100px;
     font-family: "PPFragment";
     font-size: 48pt;
+    margin-top: 3%;
     margin-bottom: -2%;
     padding-left: 3%;
     color: #9DBC98;
@@ -275,27 +287,83 @@ h3{
 }
 .island-stats{
     border: 2px solid #436850;
+    background-color: #f0efcd;
     height: auto;
     grid-column: span 3;
     border-radius: 20px;
-    padding: 15px 35px;
+    padding: 35px 35px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .island-stats h2{
     font-size: 18pt;
     font-family: 'PPRSM';
-    color: #9DBC98;
+    color: #8bac86;
 }
-.island-stats:hover{
-    background-color: #cfe7ea;
+.island-stats h2:hover{
+    color: #436850;
 }
 .toggle-content {
     display: none;
-    padding: 10px;
+    padding: 10px 0px;
     margin-top: 10px;
 }
-.gear-info{
-    background-color: #cfe7ea;
-    height: 250vh; 
+#gear-info{
+    font-family: 'PPCirka';
+    font-size: 18px;
+    color: #365a43;
+}
+.plant-pic{
+    display: flex;
+    overflow: auto;
+    align-items: center;
+}
+.plant{
+    height: 200px;
+    width: 250px;
+    background-color: #9DBC98;
+    margin: 10px 20px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #9DBC98;
+}
+.plant img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.plant p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #8bac8698; 
+    display: none;
+    box-sizing: border-box;
+    font-family: "PPCirka";
+    color: #436850;
+}
+.plant:hover p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+button{
+    text-decoration: none;
+    background: none;
+    border: 2px solid #9DBC98;
+    border-radius: 20px;
+    width: 50px;
+    height: 75px;
+    font-size: 20pt;
+    color: #9DBC98;
+}
+button:hover{
+    color: #436850;
+    border: 2px solid #436850;
 }
