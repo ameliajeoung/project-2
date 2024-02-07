@@ -19,33 +19,22 @@ function toggleSection(sectionId) {
     }
 }
 
-let currentIndex = 0;
-clickPlants(0);
+let currentPosition = 1; 
 
 function clickPlants(direction) {
-    currentIndex += direction;
+    currentPosition += direction;
 
-    const totalPlants = document.getElementsByClassName('plant').length;
+    currentPosition = Math.min(Math.max(currentPosition, 1), 4);
 
-    if (currentIndex < 0) {
-        currentIndex = totalPlants - 1;
-    } else if (currentIndex >= totalPlants) {
-        currentIndex = 0;
+    for (let i = 1; i <= 7; i++) {
+        document.getElementById(`plant${i}`).style.display = 'none';
     }
 
-    let plants = document.getElementsByClassName('plant');
-    console.log(totalPlants);
-    let loopStart = currentIndex;
-
-    for (let i = 0; i < plants.length; i++) {
-        plants[i].style.display = 'none';
-    }
-
-    let loopEnd = (loopStart + 4) % totalPlants;
-
-    for (let i = loopStart; i !== loopEnd; i = (i + 1) % totalPlants) {
-        plants[i].style.display = 'block';
+    for (let i = currentPosition; i < currentPosition + 4; i++) {
+        document.getElementById(`plant${i}`).style.display = 'block';
     }
 }
+
+clickPlants(0);
 
 

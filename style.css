@@ -133,6 +133,7 @@ h1{
     background-position: center;
     background-repeat: no-repeat; 
     margin: 100px 20px 100px 100px;
+    transition: border-radius 1s;
 }
 .cahaya-info{
     background-color: #aec2a8a6;
@@ -210,6 +211,9 @@ h1{
     letter-spacing: 0.3px;
 
 }
+#island1 img{
+    filter: none;
+}
 .islands{
     background-color: #FBFADA;
     height: 91vh;
@@ -278,7 +282,7 @@ span{
 }
 .island-grid{
     display: grid;
-    grid-template-columns: 6fr 3fr 4fr;
+    grid-template-columns: 7fr 4fr 4fr;
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -296,6 +300,14 @@ span{
 .island-pic{
     background-color: #9DBC98;
     height: 400px;
+    border-radius: 20px;
+    border: 2px solid #79a9af;
+}
+.island-pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
     border-radius: 20px;
 }
 .island-description{
@@ -322,6 +334,14 @@ h3{
     background-color: #A1CCD1;
     height: 400px;
     border-radius: 20px;
+    border: 2px solid #79a9af;
+}
+.island-toggle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
 }
 .island-stats{
     border: 2px solid #436850;

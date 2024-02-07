@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Strobi Island</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png">
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="phone">
+        unfortunately, this website has not been optimized for smaller screens yet. view on a computer screen, or come back another time!
+    </div>
+    <div class="page1">
     <div class="nav">
         <p><a href="island1.html"> ← previous island</a></p>
         <p><a href="index.html">home</a></p>
         <p><a href="island1.html">next island →</a></p>
     </div>
-    
+
     <div id="island-name">
         Strobi
     </div>
 
     <div class="island-info">
         <div class="island-grid">
-        <div class="island-pic"> island image</div>
+        <div class="island-pic"> 
+            <img src="images/strobi.jpg">
+        </div>
         <div class="island-description"> 
             <p>A grassy plain with a mildly temperative climate. Mainly inhabited by shepherds, the livestock of this island are larger than normal due to the ideal environment and the quality of their care.</p>
             <p>Cahaya first started traveling here for the animal husbandry, but the fascinating flora here piqued her interest.</p>
         </div>
-        <div class="island-toggle"> island stats</div>
+        <div class="island-toggle">
+            <img src="images/stats.jpg">
+        </div>
         </div>
 
         <div class="info-toggle">
@@ -37,53 +45,54 @@
                     <div class="plant-pic">
                         <button onclick="clickPlants(-1)"> ← </button>
 
-                        <div class="plant">
+                        <div class="plant" id="plant1">
                             <img src="images/plant1.png" alt="Plant 1" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
+                            <h4>Strobi Coral </h4>
+                            <p>The only edible coral in the world is found off the coast of Strobi Island. Nutty and chewy when candied. </p>
+                            
+                            </div>
+                        </div>
+                        <div class="plant" id="plant2">
+                            <img src="images/plant2.png" alt="Plant 2" class="hover-image">
+                            <div class="plant-text">
+                            <h4>Pearl Bud Vines</h4>
                             <p>A rare flower named for the way its buds look like pearls before blossoming. It doesn’t taste very good, but looks pretty as a garnish.</p>
                             </div>
                         </div>
-                        <div class="plant">
-                            <img src="images/plant2.png" alt="Plant 1" class="hover-image">
+                        <div class="plant" id="plant3">
+                            <img src="images/plant3.png" alt="Plant 3" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 2</p>
+                            <h4>Sulec Leaf</h4>
+                            <p>These large leaves have a very sharp, almost bitter taste. They can be easily cultivated at home by simply placing them in a glass of water.</p>
                             </div>
                         </div>
-                        <div class="plant">
-                            <img src="images/test.jpg" alt="Plant 1" class="hover-image">
+                        <div class="plant" id="plant4">
+                            <img src="images/plant4.png" alt="Plant 4" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 3</p>
+                            <h4>Plum Blossoms</h4>
+                            <p> Very fragrant petals; makes delicious tea, or tea scones. Also key for making plum extract. </p>
                             </div>
                         </div>
-                        <div class="plant">
-                            <img src="images/planet.jpg" alt="Plant 1" class="hover-image">
+                        <div class="plant" id="plant5">
+                            <img src="images/plant5.png" alt="Plant 5" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 4</p>
+                            <h4>Bone Flora</h4>
+                            <p> White and solid like a spinal cord; if you ground up its branches, it can make a flour ideal for delicate, finicky recipes.</p>
                             </div>
                         </div>
-                        <div class="plant">
-                            <img src="images/home.jpg" alt="Plant 1" class="hover-image">
+                        <div class="plant" id="plant6">
+                            <img src="images/plant6.png" alt="Plant 6" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 5</p>
+                            <h4>Wind Roots</h4>
+                            <p> The name for the roots of the grass in the 5th-7th weeks of summer. This is when wind is most intense, so the roots produce extra nutrients for strength, making them sweeter and healthier.</p>
                             </div>
                         </div>
-                        <div class="plant">
-                            <img src="images/cahaya.png" alt="Plant 1" class="hover-image">
+                        <div class="plant" id="plant7">
+                            <img src="images/plant7.png" alt="Plant 7" class="hover-image">
                             <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 6</p>
-                            </div>
-                        </div>
-                        <div class="plant">
-                            <img src="images/test.jpg" alt="Plant 1" class="hover-image">
-                            <div class="plant-text">
-                            <h4>Pearl Blossom Plant</h4>
-                            <p> plant 7</p>
+                            <h4>Plum Acorns</h4>
+                            <p> Very nutty in taste. Good for basic flour, textured butters, or a candied crunch.</p>
                             </div>
                         </div>
                         
@@ -105,6 +114,6 @@
             </div>
         </div>
     </div>
-
+</div>
 </body>
 </html>

@@ -17,6 +17,23 @@
         }
     });
 });
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+
+        var maxBorderRadius = 50;
+        var minBorderRadius = 0;
+        var maxScroll = 1700;
+
+        var newBorderRadius = minBorderRadius + (scrollPosition / maxScroll) * (maxBorderRadius - minBorderRadius);
+
+        document.getElementById('cahaya-pic').style.borderRadius = newBorderRadius + '%';
+
+        if (scrollPosition > maxScroll/2) {
+            document.getElementById('cahaya-pic').style.borderRadius = maxBorderRadius + '%';
+        } else {
+            document.getElementById('cahaya-pic').style.borderRadius = minBorderRadius + '%';
+        }
+    });
     </script>
 </head>
 
@@ -65,7 +82,7 @@
     <div class="planet-gap">
     <div class="planet-info">
         <div class="planet-p">
-        <p>The world where Cahaya lives is extremely diverse in its range of biomes. Like Earth, it is over 70% water, but unlike our planet, there are no greater land masses. There are only islands to explore, and each has its own vastly different ecosystem and climate. You can spend lifetimes traveling this planet and not even scratch the surface of its biodiversity!</p>
+        <p>The world where Cahaya lives is huge, and is extremely diverse in its range of biomes. Like Earth, it is over 70% water and has many similar species and environments, but unlike our planet, there are no greater land masses. There are only islands to explore, and each has its own vastly different ecosystem and climate. You can spend lifetimes traveling this planet and not even scratch the surface of its biodiversity!</p>
         <p></p>
         </div>
         <div class="planet-p">
@@ -75,8 +92,8 @@
         <div class="planet-p">
         <i>
         <p>**Artist's Note: </p>
-        <p>This website is still a work in progress. The basic design and coding are complete, but it is not yet optimized for mobile devices.</p>
-        <p>I am also limited by the amount of illustrations necessary for this project. Eventually, I would like to expand Cahaya's world as much as possible, so that there will be more than one island to explore, and each has a database of gear needed for its specific climate.</p>
+        <p>This website is still a work in progress. The basic design may be complete, but it is not yet optimized for mobile devices.</p>
+        <p>I am also limited by the amount of illustrations necessary for this project. Eventually, I would like to expand Cahaya's world so that there are more than one island to explore, and each has a database of gear needed for its specific climate.</p>
         </i>
         </div>
     </div>
@@ -86,7 +103,7 @@
 <div class="islands" id="islands">
     <a href="island1.html">
     <div class="island" id="island1"> 
-        <img src="images/test.jpg" alt="Island 1">
+        <img src="images/strobi1.jpg" alt="Island 1">
         <span>Strobi Island ></span>
     </div>
     </a>
@@ -105,7 +122,7 @@
 </div>
 
 <div class="me">
-    note: there is currently only one island available due to the amount of illustrations needed for each island's profile :P
+    by amelia jeoung
 </div>
 
 </div>
